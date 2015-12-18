@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Tasks-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Tasks" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Wristructions_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="6zE-Wm-LpJ">
+                            <items>
+                                <tableRow identifier="RowIdentifier" id="XzK-Og-g2g" customClass="myTableRowController" customModule="Wristructions_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="MTM-iI-5OA">
+                                        <items>
+                                            <label alignment="left" text="Label" id="ztH-R9-uTg"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="uDl-rm-Bk9" kind="push" identifier="GoingToStepsTable" id="t5S-UE-h0A"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="ztH-R9-uTg" id="vu4-h7-8qJ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="theTable" destination="6zE-Wm-LpJ" id="I71-ic-CjX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--List Of StepsWKIC-->
+        <scene sceneID="lEC-ye-Bzn">
+            <objects>
+                <controller id="uDl-rm-Bk9" customClass="ListOfStepsWKIC" customModule="Wristructions_WatchKit_Extension">
+                    <items>
+                        <separator alignment="left" id="rI9-jx-Iix">
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <separator alignment="left" id="FKv-Av-J7R">
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <button width="1" alignment="left" title="Click to Begin" id="BVt-5G-L6E">
+                            <color key="titleColor" red="0.010205442870535883" green="0.019213558656328171" blue="0.020098638268156388" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.41954557024354305" green="0.8144697621413044" blue="0.85285003491620115" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Nlv-La-lF1" kind="push" id="IB3-ee-pmp"/>
+                            </connections>
+                        </button>
+                        <label width="1" alignment="left" text="Pre Checklist" textAlignment="center" id="kV7-Wo-pgu"/>
+                        <table alignment="left" id="mXd-TX-E8M">
+                            <items>
+                                <tableRow identifier="StepIndentifier" selectable="NO" id="YSU-6f-Ssw" customClass="myTableRowController" customModule="Wristructions_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="hEt-2g-zaM">
+                                        <items>
+                                            <label width="134" alignment="left" verticalAlignment="center" text="Label" textAlignment="left" id="ZmP-ow-Ana"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="6" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="ZmP-ow-Ana" id="oDR-XO-zyd"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Button" id="Czg-mf-WaN"/>
+                    </items>
+                    <variation key="default">
+                        <mask key="items">
+                            <exclude reference="Czg-mf-WaN"/>
+                        </mask>
+                    </variation>
+                    <variation key="device=watch38mm">
+                        <mask key="items">
+                            <include reference="Czg-mf-WaN"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="prechecklistLabel" destination="kV7-Wo-pgu" id="wj5-Kl-pr2"/>
+                        <outlet property="theTable" destination="mXd-TX-E8M" id="thF-zx-yCV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="443" y="343"/>
+        </scene>
+        <!--pageDynamic-->
+        <scene sceneID="ua2-89-oxy">
+            <objects>
+                <controller identifier="pageDynamic" id="Nlv-La-lF1" customClass="PageDynamicWKIC" customModule="Wristructions_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="qd8-qE-Pin">
+                            <items>
+                                <label width="76" height="28" alignment="left" verticalAlignment="center" text="step #" minimumScaleFactor="0.80000000000000004" id="Lzv-9q-lSY">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <timer alignment="right" verticalAlignment="center" id="XZ5-df-Idz"/>
+                            </items>
+                        </group>
+                        <group width="159" alignment="center" id="dbh-SS-Ols">
+                            <items>
+                                <button width="58" height="29" alignment="left" title="previous" id="5LR-IH-BhP">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="previousWasHit" destination="Nlv-La-lF1" id="uRI-r9-Pkh"/>
+                                    </connections>
+                                </button>
+                                <group width="20" height="20" alignment="center" verticalAlignment="center" backgroundImage="SmallClock2" id="UoD-mb-6H1">
+                                    <color key="backgroundColor" red="0.33996844570011386" green="0.86853593667039553" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </group>
+                                <button height="29" alignment="right" title="skip timer" id="tRd-MY-3nY">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="skipTimerHit" destination="Nlv-La-lF1" id="x2s-qU-1Fh"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
+                        <separator alignment="left" id="Fz7-Jn-9cc">
+                            <color key="color" red="0.17952103868456865" green="0.28587639664804465" blue="0.25319880362970748" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <group width="1" height="85" alignment="left" id="Ubs-T9-TV4">
+                            <items>
+                                <button alignment="center" verticalAlignment="center" id="ciu-3p-NFG">
+                                    <group key="contentGroup" width="136" height="1" alignment="left" id="nNb-8Y-TP3">
+                                        <items>
+                                            <label width="1" height="1" alignment="center" verticalAlignment="bottom" text="ssd sfgfdgdf dfgdfgd fdgdfgd gdfgd dfgdfg dfgdfg dfgdfg dfgdf gdfgd fdg" textAlignment="center" numberOfLines="4" id="jSz-lu-Per">
+                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="buttonPressed" destination="Nlv-La-lF1" id="PyG-Ka-TLi"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="WKTimer" destination="XZ5-df-Idz" id="zWH-hg-DCK"/>
+                        <outlet property="button" destination="ciu-3p-NFG" id="QiX-ae-tCz"/>
+                        <outlet property="buttonLabel" destination="jSz-lu-Per" id="l1j-qH-KSm"/>
+                        <outlet property="previousButton" destination="5LR-IH-BhP" id="BhK-rx-ofw"/>
+                        <outlet property="skipTimerButton" destination="tRd-MY-3nY" id="ozu-PP-iJ2"/>
+                        <outlet property="stepLabel" destination="Lzv-9q-lSY" id="OuP-IL-uIk"/>
+                        <outlet property="timerImage" destination="UoD-mb-6H1" id="RGw-B0-zuD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="679" y="323"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Wristructions_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>

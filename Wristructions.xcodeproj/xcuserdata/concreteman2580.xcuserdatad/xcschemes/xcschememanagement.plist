@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CoreDataAccessFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Glance - Wristructions WatchKit App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Notification - Wristructions WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Wristructions WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Wristructions.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2006385E1B9023190006F762</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>200638761B90231F0006F762</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2006389A1B9024290006F762</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>200638B51B9024600006F762</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>200638BF1B9024600006F762</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

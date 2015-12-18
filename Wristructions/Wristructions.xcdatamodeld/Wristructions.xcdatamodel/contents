@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Instruction" representedClassName="Instruction" syncable="YES">
+        <attribute name="arrayOfChecklistItems" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="arrayOfSteps" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Instruction" positionX="-63" positionY="-18" width="128" height="90"/>
+    </elements>
+</model>
